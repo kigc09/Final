@@ -55,6 +55,13 @@ public class RegisterationServlet extends HttpServlet {
     private void registerForm(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
+        HttpSession session = req.getSession(false);
+
+        if (session == null || session.getAttribute("user") == null) {
+            resp.sendRedirect(req.getContextPath() + "/login");
+            return;
+        }
+
         req.setAttribute("siteTitle", "Enter Item");
 
         req.getRequestDispatcher("/WEB-INF/jsp/registrationForm.jsp")
@@ -63,6 +70,13 @@ public class RegisterationServlet extends HttpServlet {
 
     private void registerItem(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+
+        HttpSession session = req.getSession(false);
+
+        if (session == null || session.getAttribute("user") == null) {
+            resp.sendRedirect(req.getContextPath() + "/login");
+            return;
+        }
 
         try {
 

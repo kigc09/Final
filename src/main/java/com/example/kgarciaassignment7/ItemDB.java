@@ -47,7 +47,7 @@ public class ItemDB {
 
                 Image i = new Image();
                 i.setName(rs.getString("imageName"));
-                i.setContents(rs.getBytes("imageContents"));
+                i.setContents(rs.getBytes("imageContent"));
                 a.setImage(i);
 
                 itemDB.put(rs.getInt("itemID"), a);
@@ -97,7 +97,7 @@ public class ItemDB {
                 i.setName(rs.getString("imageName"));
 
                 byte[] contents =
-                        rs.getBytes("imageContents");
+                        rs.getBytes("imageContent");
 
                 if (contents != null) {
                     i.setContents(contents);
@@ -118,7 +118,7 @@ public class ItemDB {
         String sql = """
         INSERT INTO Items
         (itemID, itemName, itemType, manufacturer,
-         itemPrice, itemInventory, imageName, imageContents)
+         itemPrice, itemInventory, imageName, imageContent)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """;
 
