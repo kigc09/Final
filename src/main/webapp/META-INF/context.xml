@@ -1,0 +1,24 @@
+<Context path="/KGarcia-Assignment8">
+    <Resource name="jdbc/KGarcia-Assignment8"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              testWhileIdle="true"
+              testOnBorrow="true"
+              testOnReturn="false"
+              validationQuery="SELECT 1"
+              validationInterval="30000"
+              timeBetweenEvictionRunsMillis="30000"
+              maxActive="100"
+              minIdle="10"
+              maxWait="10000"
+              initialSize="10"
+              removeAbandonedTimeout="60"
+              removeAbandoned="true"
+              minEvictableIdleTimeMillis="30000"
+              jmxEnabled="false"
+              jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+        org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+              driverClassName="org.sqlite.JDBC"
+              url="jdbc:sqlite:C:/Users/westh/INFO 1531 Java II/Final Project/KGarcia-Assignment8/KGarcia-Assignment8.db"/>
+</Context>

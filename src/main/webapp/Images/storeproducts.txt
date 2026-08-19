@@ -1,0 +1,33 @@
+productname	manufacturer	id	inventory	price
+MCC Lanyard	Spirit	075942	10	4.95
+Hydroflask 32oz	Hydro Flask	MMS02168	5	44.95
+MCC Bristro Mug 16 oz	LXG	044251	10	14.00
+MCC Ballpoint Pen	LXG	DA-B58	25	6.95
+College ID Holder	LXG	CG-8052	8	11.95
+Key Strap	Spirit	KT269	12	0.49
+MCC T-Shirt - XL	Champion	030631	8	20.00
+MCC T-Shirt - L	Champion	030632	10	20.00
+MCC T-Shirt - M	Champion	030633	13	20.00
+MCC T-Shirt - S	Champion	030634	5	20.00
+MCC Long Sleeve - XL	Champion	040631	5	26.00
+MCC Long Sleeve  - L	Champion	040632	8	26.00
+MCC Long Sleeve  - M	Champion	040633	7	26.00
+MCC Long Sleeve  - S	Champion	040634	3	26.00
+MCC Trucker Cap	Legacy	067101	23	28.00
+MCC Hooded Sweatshirt - XL	Champion	070631	10	44.00
+MCC Hooded Sweatshirt - L	Champion	070632	8	44.00
+MCC Hooded Sweatshirt - M	Champion	070633	7	44.00
+MCC Hooded Sweatshirt - S	Champion	070634	7	44.00
+Snickers	Mars	401020	35	1.43
+Milky Way	Mars	006947	25	1.62
+3 Musketeers	Mars	246039	32	1.55
+Reese's Peanut Butter Cups	Hershey	004409	28	1.25
+Hershey's Chocolate Bar	Hershey	240005	18	1.09
+PayDay	Hershey	807229	24	1.65
+Pepsi	Pepsi	182952	48	2.25
+Pepsi Zero	Pepsi	182955	36	2.25
+Mountain Dew	Pepsi	182476	64	2.25
+Diet Mountain Dew	Pepsi	182478	32	2.25
+Starry	Pepsi	182322	63	2.25
+Dr. Pepper	Dr Pepper Snapple Group	237834	46	2.25
+Diet Dr. Pepper	Dr Pepper Snapple Group	237835	25	2.25
