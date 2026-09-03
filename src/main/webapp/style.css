@@ -110,6 +110,27 @@ h2, p {
     text-align: left;
 }
 
+.modifyImage {
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+.modifyImage img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modifyItemImage {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+}
+
 .inventoryBox{
     display: inline-block;
     background-color: #0d76a3;
@@ -128,21 +149,21 @@ h2, p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
-    padding: 50px;
+    padding: 30px;
     background-color: lightgrey;
-    border: 2px solid #0068b0;
+    border: 4px solid #0068b0;
     border-radius: 10px;
     box-sizing: border-box;
 }
 
 .inventoryImage {
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
     flex-shrink: 0;
 }
 
@@ -161,7 +182,7 @@ h2, p {
     padding: 0;
     color: black;
     text-align: left;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .inventoryItem h2{
@@ -174,6 +195,156 @@ h2, p {
 .inventoryBox p{
     color: white;
     font-size: 2.3em;
+}
+
+.inventorySearch {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    width: 100%;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.inventorySearch form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inventorySearch label {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.inventorySearch input[type="text"],
+.inventorySearch select {
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.inventorySearch input[type="text"] {
+    width: 220px;
+}
+
+.inventorySearch button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0068b0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.inventorySearch button:hover {
+    background-color: #095a7d;
+}
+
+.inventoryStatus {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.lowInventory {
+    color: #009a8d;
+    background-color: #fff3cd;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.outOfStock {
+    color: #b00020;
+    background-color: #f8d7da;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.inStock {
+    color: #073d1d;
+    background-color: #8edeaf;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+
+/* -------- INVENTORY UPDATE FORM -------- */
+
+.inventoryUpdateForm {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 12px 15px;
+
+    background-color: #f5f8fa;
+    border: 1px solid #d5dce0;
+    border-radius: 8px;
+}
+
+.inventoryUpdateForm label {
+    font-weight: bold;
+    color: #333;
+}
+
+.inventoryUpdateForm input[type="number"] {
+    width: 70px;
+    padding: 8px;
+
+    font-size: 1rem;
+    text-align: center;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.inventoryUpdateForm input[type="number"]:focus {
+    outline: none;
+    border-color: #0068b0;
+}
+
+.inventoryUpdateForm input[type="submit"] {
+    padding: 8px 15px;
+
+    background-color: #0068b0;
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.inventoryUpdateForm input[type="submit"]:hover {
+    background-color: #004f87;
+}
+
+.updateItem{
+    background-color: #92c6ea;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.deleteItem{
+    background-color: #92c6ea;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 main {
@@ -281,6 +452,7 @@ label {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
 .emptyInventory{
@@ -386,4 +558,212 @@ footer a {
     text-align: center;
     color: red;
     font-weight: bold;
+}
+
+/* -------- DASHBOARD -------- */
+
+.dashboard {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    color: #0d76a3;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.dashboard > p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.dashboard > p strong {
+    color: #0068b0;
+}
+
+
+/* Dashboard options */
+
+.dashboardOptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Dashboard links */
+
+.dashboardOptions a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    min-height: 100px;
+    padding: 20px;
+
+    background-color: white;
+    color: #0068b0;
+
+    border: 2px solid #0068b0;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s;
+}
+
+
+/* Hover */
+
+.dashboardOptions a:hover {
+    background-color: #0068b0;
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .dashboard {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .dashboardOptions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboardOptions a {
+        width: 90%;
+    }
+}
+
+/* ========================================
+   MANAGE USERS
+   ======================================== */
+
+.manageUsers {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+}
+
+/* Page heading */
+.manageUsers h2 {
+    text-align: center;
+    color: #0d76a3;
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   USER BUTTONS
+   ======================================== */
+
+.manageUsers .addUserButton {
+    display: inline-block;
+    background-color: #0068b0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px 25px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.manageUsers .addUserButton:hover {
+    background-color: #0d76a3;
+}
+
+
+/* ========================================
+   USERS TABLE
+   ======================================== */
+
+.manageUsers table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+
+/* Table header */
+.manageUsers th {
+    background-color: #0068b0;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+
+/* Table cells */
+.manageUsers td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Alternate row color */
+.manageUsers tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Highlight row when mouse is over it */
+.manageUsers tbody tr:hover {
+    background-color: #e6f2f8;
+}
+
+
+/* ========================================
+   EDIT / DELETE LINKS
+   ======================================== */
+
+.manageUsers td a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Edit button */
+.manageUsers td a:first-child {
+    background-color: #0068b0;
+    color: white;
+}
+
+.manageUsers td a:first-child:hover {
+    background-color: #0d76a3;
+}
+
+
+/* Delete button */
+.manageUsers td a:nth-child(2) {
+    background-color: #b3261e;
+    color: white;
+}
+
+.manageUsers td a:nth-child(2):hover {
+    background-color: #8b1a15;
 }

@@ -4,9 +4,21 @@ public class User {
     int id;
     String name;
     String contact;
-    String email;
+    private String email;
     String userLogin;
     String password;
+    private String createdBy;
+    private String createdAt;
+
+    private UserRole role;
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
 
     public int getId() {
         return id;
@@ -54,5 +66,23 @@ public class User {
     public String getPassword(){ return password; }
 
     public void setPassword(String password) { this.password = password; }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
 }
 

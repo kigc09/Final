@@ -24,19 +24,42 @@ This is a inventory management website for users to search through products and 
     <h1>MCC Store Inventory</h1>
     <nav>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="item?action=list">Inventory List</a></li>
-            <li><a href="item?action=register">Register an Item</a></li>
+            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+
+            <li>
+                <a href="${pageContext.request.contextPath}/item?action=list">
+                    Inventory List
+                </a>
+            </li>
+
+            <c:if test="${not empty sessionScope.user}">
+                <li>
+                    <a href="${pageContext.request.contextPath}/dashboard">
+                        Dashboard
+                    </a>
+                </li>
+            </c:if>
+
             <c:choose>
-                <c:when test="${user == null}">
-                    <li><a href="login">Login</a></li>
+                <c:when test="${not empty sessionScope.user}">
+                    <li>
+                        <a href="${pageContext.request.contextPath}/login?logout=true">
+                            Logout
+                        </a>
+                    </li>
                 </c:when>
+
                 <c:otherwise>
-                    <li><a href="login?logout">Logout</a></li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/login">
+                            Login
+                        </a>
+                    </li>
                 </c:otherwise>
             </c:choose>
 
         </ul>
     </nav>
+
 </header>
 <main class="home">

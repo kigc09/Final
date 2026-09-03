@@ -47,6 +47,23 @@ public class LoginServlet extends HttpServlet {
         String userLogin = req.getParameter("userLogin");
         String password = req.getParameter("password");
 
+        User user = ItemDB.getUser(userLogin, password);
+
+        if (user != null) {
+
+            session.setAttribute("user", user);
+
+            resp.sendRedirect(req.getContextPath() + "/dashboard");
+            return;
+
+        } else {
+
+            req.setAttribute("loginError", "Invalid username or password.");
+
+            req.getRequestDispatcher("/WEB-INF/jsp/loginForm.jsp")
+                    .forward(req, resp);
+        }
+
         System.out.println("=== LOGIN DEBUG ===");
         System.out.println("userLogin: " + userLogin);
         System.out.println("password: " + password);
